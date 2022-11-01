@@ -12,7 +12,7 @@ if __name__ == '__main__':
     if MODEL_TYPE == 'offline':
         collector.get_offline_data()
     elif MODEL_TYPE == 'online':
-        schedule.every().minute.do(collector.get_online_data_per_hour)
+        schedule.every().hour.do(collector.get_online_data_per_hour)
         while True:
             schedule.run_pending()
 
