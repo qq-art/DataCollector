@@ -25,7 +25,7 @@ class Model:
         starred_at_list = [datetime.timestamp(people.starred_at) for people in stargazers]
         starred_at_list.sort(reverse=True)
 
-        timestamp_one_hour_ago = datetime.timestamp((datetime.now() - timedelta(hours=9)))
+        timestamp_one_hour_ago = datetime.timestamp((datetime.now() - timedelta(hours=1)))
 
         for ts in starred_at_list:
             if ts >= timestamp_one_hour_ago:
